@@ -95,4 +95,14 @@ public class SimpleLinkedList<D> {
         System.out.println("No node found with value " + data);
         return null;
     }
+    public boolean insertAfter(D searchData, D insertData) {
+        if ((searchData) != null){
+            Node<D> nextNode = search(searchData).getNextNode();
+            Node<D> newNode = new Node<>(insertData);
+            search(searchData).setNextNode(newNode);
+            newNode.setNextNode(nextNode);
+            return true;
+        }
+        return false;
+    }
 }
