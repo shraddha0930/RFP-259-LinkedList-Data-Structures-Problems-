@@ -20,8 +20,11 @@ public class LinkedListMain {
        // simpleLinkedList.popLast();
 
      //   simpleLinkedList.search(30);
-      //  simpleLinkedList.insertAfter(30,40);
-        simpleLinkedList.delete(40);
+       simpleLinkedList.insertAfter(30,40);
+       // simpleLinkedList.delete(40);
+        simpleLinkedList.display();
+        System.out.println();
+        simpleLinkedList.sortLinkedList();
         simpleLinkedList.display();
 
 
