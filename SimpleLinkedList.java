@@ -105,4 +105,21 @@ public class SimpleLinkedList<D> {
         }
         return false;
     }
+
+    public void delete(D data) {
+        Node currentNode = head;
+        Node tail = null;
+        int size = 0;
+        while (currentNode!= null) {
+            size ++;
+            if (currentNode.data == data) {
+                tail.nextNode = currentNode.nextNode;
+            }
+            tail = currentNode;
+            currentNode = currentNode.nextNode;
+        }
+        System.out.println("No node found with value " + data);
+        System.out.println("after delete linked list size is: "+size);
+
+    }
 }
