@@ -23,7 +23,7 @@ public class SimpleLinkedList<D> {
     public void display() {
         Node<D> temp = head;
         // check for empty list
-        if (head == null) {
+        if (temp == null) {
             System.out.println("list is empty");
             exit(1);
         } else {
@@ -38,5 +38,15 @@ public class SimpleLinkedList<D> {
                     System.out.print(" -> ");
             }
         }
+    }
+    public void append(D data) {
+        Node<D> newNode = new Node<>(data);
+        if(head == null){
+            head = newNode;
+        }
+        else {
+            tail.setNextNode(newNode);
+        }
+        tail = newNode;
     }
 }
