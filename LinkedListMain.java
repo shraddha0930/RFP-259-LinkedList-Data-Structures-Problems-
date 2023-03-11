@@ -19,7 +19,8 @@ public class LinkedListMain {
       //  simpleLinkedList.pop();
        // simpleLinkedList.popLast();
 
-        simpleLinkedList.search(30);
+     //   simpleLinkedList.search(30);
+        simpleLinkedList.insertAfter(30,40);
         simpleLinkedList.display();
 
 
