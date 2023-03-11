@@ -65,10 +65,20 @@ public class SimpleLinkedList<D> {
         node.nextNode = temp.nextNode;
         temp.setNextNode(node);
     }
-    public D pop() {
+   /* public D pop() {
         D temp = head.getData();
         head = head.getNextNode();
         return temp;
-    }
+    }*/
 
+    public D popLast() {
+        D temp = tail.getData();
+        Node<D> secondLast = head;
+        while(secondLast.getNextNode() != tail){
+            secondLast = secondLast.getNextNode();
+        }
+        secondLast.setNextNode(null);
+        tail = secondLast;
+        return temp;
+    }
 }
