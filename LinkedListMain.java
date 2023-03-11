@@ -15,6 +15,8 @@ public class LinkedListMain {
         simpleLinkedList.append(70);
   //      simpleLinkedList.display();
         simpleLinkedList.insertInBetween(56 ,30);
+
+        simpleLinkedList.pop();
         simpleLinkedList.display();
 
 
