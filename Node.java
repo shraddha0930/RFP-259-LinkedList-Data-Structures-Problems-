@@ -1,7 +1,7 @@
 package assignments.LinkedListProblems;
 
 public class Node<D>{
-    private D data;
+    public D data;
     Node<D> nextNode;
 
     public Node(D data) {

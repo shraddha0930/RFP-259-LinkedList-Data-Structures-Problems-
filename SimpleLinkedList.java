@@ -1,5 +1,7 @@
 package assignments.LinkedListProblems;
 
+import com.Mar1.MyLinkedList;
+
 import static java.lang.System.exit;
 
 public class SimpleLinkedList<D> {
@@ -49,4 +51,19 @@ public class SimpleLinkedList<D> {
         }
         tail = newNode;
     }
+    public void insertInBetween(D previous, D newNode) {
+        Node currentNode = head;
+        Node temp = null;
+        while (currentNode != null) {
+            if (currentNode.data == previous) {
+                temp = currentNode;
+            }
+            currentNode = currentNode.nextNode;
+        }
+        Node node = new Node(newNode);
+        node.setData(newNode);
+        node.nextNode = temp.nextNode;
+        temp.setNextNode(node);
+    }
+
 }

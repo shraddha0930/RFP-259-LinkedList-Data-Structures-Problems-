@@ -11,9 +11,14 @@ public class LinkedListMain {
 //        System.out.println();
 
         simpleLinkedList.add(56);
-        simpleLinkedList.append(30);
+      //  simpleLinkedList.append(30);
         simpleLinkedList.append(70);
+  //      simpleLinkedList.display();
+        simpleLinkedList.insertInBetween(56 ,30);
         simpleLinkedList.display();
+
+
+
 
     }
 }
