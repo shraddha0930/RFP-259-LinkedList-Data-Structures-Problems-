@@ -122,4 +122,24 @@ public class SimpleLinkedList<D> {
         System.out.println("after delete linked list size is: "+size);
 
     }
+    public void sortLinkedList() {
+        Node currentNode = head;
+        Node index = null;
+        int temp;
+
+        if (head != null) {  //if head null return empty
+            while (currentNode != null) { // index points to the node next to current
+                index = currentNode.nextNode;
+                while (index != null) {
+                    if ((int)currentNode.data > (int)index.data) { //check data of current node is greater than next node / if grater swap
+                        temp = (int) currentNode.data;
+                        currentNode.data = index.data;
+                        index.data = temp;
+                    }
+                    index = index.nextNode;
+                }
+                currentNode = currentNode.nextNode;
+            }
+        }
+    }
 }
