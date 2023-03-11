@@ -81,4 +81,18 @@ public class SimpleLinkedList<D> {
         tail = secondLast;
         return temp;
     }
+    public Node search(D data) {
+        Node currentNode = head;
+        int position = 0;
+        while (currentNode != null) {
+            position ++;
+            if (currentNode.data== data) {
+                System.out.println("Node with value " + data + " is found at position "+position);
+                return currentNode;
+            }
+            currentNode = currentNode.nextNode;
+        }
+        System.out.println("No node found with value " + data);
+        return null;
+    }
 }
